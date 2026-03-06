@@ -1,0 +1,1 @@
+little information cards about TV shows (for now, might change some aspects later as project progresses)
