@@ -1,5 +1,15 @@
+// coloring
 $primary-color: rgb(52, 102, 252);
 $secondary-color: rgb(48, 48, 48);
 $accent-color: rgb(255, 188, 188);
+$bg-color: #fdfdfd;
+$nav-bg: rgba(255,255,255,0.95);
+// text & font
+$text-dark: #2d3436;
 $text-light: rgb(236, 247, 247);
 $spacing: 2rem;
+$font-main: 'Inter', -apple-sysstem, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-heading: 'Outfit', sans-serif;
+// transition and shadow
+$transition-speed: 0.3;
+$hover-shadow: 0 10px 15px rgba(0,0,0,0.05);
