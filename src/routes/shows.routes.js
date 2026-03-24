@@ -1,5 +1,6 @@
 const express=require('express');
 const router=express.Router();
-router.get('/',(req,res)=>{res.render('index')})
+const tvController=require('./controller/tvController');
+router.get('/', tvController.homePage)
 
 module.exports=router;
