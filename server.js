@@ -12,9 +12,7 @@ app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname,'../public')));
 app.use('/',showsRouter);
 
-app.get('/', (req,res)=>{
-    res.render('index', {title: 'Project'});
-})
+
 
 app.use((req, res, next) => {
     res.status(404).render('404', { title: 'Site not found' });
@@ -23,6 +21,9 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Internal error');
+});
+app.get('/', (req,res)=>{
+    res.render('index', {title: 'Project'});
 });
 
 app.listen(PORT,()=>{

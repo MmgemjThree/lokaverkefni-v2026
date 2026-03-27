@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS TV_Shows (
     description TEXT,
     firstAired VARCHAR(100) NOT NULL,
     episodes INT NOT NULL,
-    length INT
+    length VARCHAR(30)
 );
 CREATE TABLE IF NOT EXISTS Stars (
     id SERIAL PRIMARY KEY,
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS starShow (
     PRIMARY KEY (showID, starID),
     CONSTRAINT fk_showsID
         FOREIGN KEY (showID)
-        REFERENCES TV_Shows(id)
+        REFERENCES TV_Shows(id),
     CONSTRAINT fk_starID
         FOREIGN KEY (starID)
         REFERENCES Stars(id)
