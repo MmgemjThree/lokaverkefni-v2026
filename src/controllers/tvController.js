@@ -1,7 +1,7 @@
 const tvService=require('../lib/showService');
 const homePage=async(req,res)=>{
     try {
-        const shows=await showService.getTVcards();
+        const shows=await tvService.getTVcards();
         res.render('index',{
             title: something,
             shows: shows
