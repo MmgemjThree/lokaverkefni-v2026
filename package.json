@@ -15,12 +15,20 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^17.3.1",
-    "ejs": "^5.0.1",
+    "ejs": "^5.0.2",
     "express": "^5.2.1",
     "pg": "^8.20.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14",
     "sass": "^1.99.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MmgemjThree/lokaverkefni-v2026.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MmgemjThree/lokaverkefni-v2026/issues"
+  },
+  "homepage": "https://github.com/MmgemjThree/lokaverkefni-v2026#readme"
 }

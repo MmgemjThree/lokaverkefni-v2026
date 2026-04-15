@@ -1,31 +1,22 @@
-const express=require('express');
-const path=require('path');
-const showsRouter=require('./src/routes/shows.routes');
-const { title } = require('process');
+require('dotenv').config();
 
-const app=express();
-const PORT=3000;
+const express = require('express');
+const path = require('path');
+const tvRouter = require('./src/routes/shows.routes');
 
-app.set('views',path.join(__dirname,'src','views'));
-app.set('view engine','ejs');
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname,'../public')));
-app.use('/',showsRouter);
+app.set('view engine', 'ejs');
 
+app.set('views', path.join(__dirname, 'src/views'));
 
+app.use(express.static(path.join(__dirname, '../public')));
 
-app.use((req, res, next) => {
-    res.status(404).render('404', { title: 'Site not found' });
+app.get('/', (req, res) => {
+    res.render('index', {title: 'TV show project'});
 });
 
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Internal error');
-});
-app.get('/', (req,res)=>{
-    res.render('index', {title: 'Project'});
-});
-
-app.listen(PORT,()=>{
-    console.log(`server is running at http://localhost:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on localhost{$PORT}`);
 });
