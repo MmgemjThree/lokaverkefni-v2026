@@ -6,7 +6,7 @@ const getItems = async () => {
 };
 const getItemByID = async(id) => {
     const result = await db.query('SELECT * FROM TV_Shows WHERE id = $1', [id]);
-    if (results.rows.length === 0) {
+    if (result.rows.length === 0) {
         return null;
     }
     return result.rows[0];
