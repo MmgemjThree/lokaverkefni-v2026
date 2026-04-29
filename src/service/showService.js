@@ -1,11 +1,11 @@
 const db = require('../lib/db');
 
 const getItems = async () => {
-    const result = await db.query('SELECT * FROM TV_Shows');
+    const result = await db.query('SELECT * FROM shows');
     return result.rows;
 };
 const getItemByID = async(id) => {
-    const result = await db.query('SELECT * FROM TV_Shows WHERE id = $1', [id]);
+    const result = await db.query('SELECT * FROM shows WHERE id = $1', [id]);
     if (result.rows.length === 0) {
         return null;
     }

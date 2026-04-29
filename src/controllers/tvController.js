@@ -1,12 +1,14 @@
+const serviceModule = require('../service/showService');
+
 const homePage = async (req, res) => {
     try {
-        const shows = await showService.getItems();
+        const shows = await serviceModule.getItems();
         res.render('index', {
             title: 'TV Shows',
             shows: shows
         });
     } catch (error) {
-        console.error('System Error(controller)');
+        console.error('System Error(homePage)');
         res.status(500).send('Homepage error');
     }
 };
