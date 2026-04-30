@@ -9,13 +9,14 @@ const homePage = async (req, res) => {
         });
     } catch (error) {
         console.error('System Error(homePage)');
+        console.log(error);
         res.status(500).send('Homepage error');
     }
 };
 const getDetails = async(req, res) => {
     try {
         const id = req.params.id;
-        const items = await showService.getItemByID(id);
+        const items = await serviceModule.getItemByID(id);
         if (!items) {
             return res.status(404).send('Item not found');
         }
