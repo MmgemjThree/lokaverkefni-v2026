@@ -1,9 +1,9 @@
 <%- include('partials/header') %>
     <div class="else">
         <div class="card-container">
-            <% if (shows > 0) { %>
+            <% if (shows && shows.episodes > 0) { %>
                 <% shows.forEach(show => { %>
-                   <div class="cards">
+                   <div class="card-container">
                         <div class="card-info">
                             <h5><%= shows.name %></h5>
                             <p>Episodes <%= shows.episodes %></p>

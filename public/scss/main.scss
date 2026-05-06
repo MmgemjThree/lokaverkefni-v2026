@@ -19,12 +19,13 @@ h1,h2,h3,h4,h5,h6 {
     font-family: $font-heading;
 }
 .header {
-    background-color: $nav-bg;
+    background-color: $primary-color;
 }
 .nav ul {
     display: flex;
     list-style: none;
     gap: 3rem;
+    justify-content: space-evenly;
     .li a {
         text-decoration: none;
         color: $text-dark;
@@ -34,4 +35,22 @@ h1,h2,h3,h4,h5,h6 {
 .container {
     display: grid;
     box-shadow: 10px;
+}
+.footer {
+    display: flex;
+    background-color: $primary-color;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    box-shadow: $box-shadow;
+}
+.card-info {
+    display: flex;
+    border-radius: 15px;
+    background-color: $secondary-color;
+    color: $text-light;
+    padding: 10px;
 }
