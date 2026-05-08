@@ -5,16 +5,16 @@
                 <% shows.forEach(show => { %>
                    <div class="card-container">
                         <div class="card-info">
-                            <h5><%= show.name %></h5>
+                            <h4><%= show.name %></h5>
                             <p>Episodes <%= show.episodes %></p>
-                            <img src="" alt="">
+                            <a href="/shows/<%= show.id %>">See more</a>
                         </div>
                     </div> 
                 <% }) %>
             <% } else { %>
                 <div class="card-container">
                     <div class="card-info">
-                        <h5>info not found</h5>
+                        <h4>info not found</h5>
                     </div>
                 </div>
             <% } %>

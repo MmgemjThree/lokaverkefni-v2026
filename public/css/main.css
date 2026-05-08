@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(48, 48, 48);
   color: rgb(236, 247, 247);
   padding: 10px;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=main.css.map */
