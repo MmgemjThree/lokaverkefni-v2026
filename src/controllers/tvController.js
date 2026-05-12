@@ -22,7 +22,7 @@ const getDetails = async(req, res) => {
         }
         res.render('showDetails', {
             title: items.name,
-            shows: items
+            show: items
         });
     } catch (error) {
         console.error('error getting specific items', error);

@@ -19,13 +19,19 @@ h1,h2,h3,h4,h5,h6 {
     font-family: $font-heading;
 }
 .header {
+    display: flex;
     background-color: $primary-color;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 .nav ul {
     display: flex;
     list-style: none;
     gap: 3rem;
     justify-content: space-evenly;
+    align-items: center;
     .li a {
         text-decoration: none;
         color: $text-dark;
@@ -41,11 +47,13 @@ h1,h2,h3,h4,h5,h6 {
     background-color: $primary-color;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 15px;
 }
 .card-container {
     display: flex;
     justify-content: center;
     box-shadow: $box-shadow;
+    padding: 15px;
 }
 .card-info {
     display: flex;
@@ -54,4 +62,19 @@ h1,h2,h3,h4,h5,h6 {
     color: $text-light;
     padding: 10px;
     flex-direction: column;
+}
+.img {
+    max-width: 500px;
+    margin: 10px;
+    border-radius: 15px;
+
+}
+.button {
+    display: flex;
+    background-color: $accent-color;
+    border-radius: 10px;
+    margin: 3px;
+    justify-content: center;
+    align-items: center;
+    color: $text-light;
 }

@@ -1,11 +1,16 @@
 <%- include('partials/header') %>
 
-<div class="card-container">
+<div class="card-info">
     <h2><%= show.name %></h2>
     <p>Episodes: <%= show.episodes %></p>
     <p>First Aired/Released: <%= show.firstAired %></p>
     <p>Episode Length: <%= show.length %></p>
     <p>Description: <%= show.description %></p>
+    <% if (show.image_url) { %>
+        <img src="<%= show.image_url %>" alt="<%= show.name %>">
+    <% } else { %>
+        <div class="img"></div>
+    <% } %>
     <a href="/" class="button">Back to home page</a>
 </div>
 
